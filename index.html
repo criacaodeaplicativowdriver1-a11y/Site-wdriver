@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W-DRIVER | Transporte legal de passageiros e entregas</title>
+    <meta name="description" content="W-DRIVER — Transporte legal de passageiros e entregas. Segurança, rapidez e preço justo." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      /* Reset & base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #050505;
+        color: #ffffff;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+      }
+
+      ::selection {
+        background: #bef264;
+        color: #000000;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* HEADER */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 1.6rem;
+        letter-spacing: -0.02em;
+      }
+
+      .logo-icon {
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(135deg, #bef264, #a3d94a);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        color: #050505;
+        font-size: 1.2rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+
+      .nav-links a {
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: #bef264;
+      }
+
+      .btn-primary {
+        background: #bef264;
+        color: #050505;
+        font-weight: 700;
+        padding: 12px 28px;
+        border-radius: 40px;
+        border: none;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.25s;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background: #a3d94a;
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(190, 242, 100, 0.25);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 24px;
+        border-radius: 40px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.25s;
+        font-family: 'Plus Jak
+arta Sans', sans-serif;
+        display: inline-block;
+      }
+      .btn-outline:hover {
+        border-color: #bef264;
+        color: #bef264;
+      }
+
+      /* HERO */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 60px 0 80px;
+      }
+
+      .hero-content h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-size: 3.8rem;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 24px;
+      }
+
+      .hero-content h1 span {
+        background: linear-gradient(135deg, #bef264, #8bc34a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 480px;
+        line-height: 1.6;
+        margin-bottom: 36px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-image .mockup {
+        width: 100%;
+        max-width: 520px;
+        aspect-ratio: 4/3;
+        background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+        border-radius: 32px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      }
+
+      .mockup .big-icon {
+        font-size: 4rem;
+        margin-bottom: 16px;
+      }
+
+      .mockup h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+      }
+
+      .mockup p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1rem;
+      }
+
+      .mockup .badge {
+        margin-top: 20px;
+        background: #bef264;
+        color: #050505;
+        padding: 8px 24px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.3px;
+      }
+
+      /* STATS */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        padding: 60px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        margin-bottom: 60px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #bef264, #8bc34a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .stat-label {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        font-size: 1rem;
+        margin-top: 4px;
+      }
+
+      /* SERVICES */
+      .services {
+        padding: 40px 0 80px;
+      }
+
+      .section-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+
+      .section-subtitle {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin-bottom: 48px;
+      }
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 32px;
+      }
+
+      .service-card {
+        background: #0d0d0d;
+        border-radius: 24px;
+        padding: 32px 28px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        transition: all 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(190, 242, 100, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .service-card .icon {
+        font-size: 2.4rem;
+        margin-bottom: 16px;
+      }
+
+      .service-card h4 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .service-card p {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.5;
+        font-size: 0.95rem;
+      }
+
+      /* TESTIMONIAL */
+      .testimonial {
+        background: #0a0a0a;
+        border-radius: 32px;
+        padding: 60px 48px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        margin-bottom: 80px;
+        text-align: center;
+      }
+
+      .testimonial blockquote {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 auto 24px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .testimonial .author {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .testimonial .avatar {
+        width: 52px;
+        height: 52px;
+        background: linear-gradient(135deg, #bef264, #8bc34a);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #050505;
+      }
+
+      .testimonial .author-info {
+        text-align: left;
+      }
+      .testimonial .author-info strong {
+        display: block;
+        font-weight: 700;
+      }
+      .testimonial .author-info span {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.9rem;
+      }
+
+      /* CTA */
+      .cta {
+        background: linear-gradient(145deg, #0d0d0d, #070707);
+        border-radius: 32px;
+        padding: 60px 48px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .cta h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2.6rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+      }
+
+      .cta p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.1rem;
+        max-width: 500px;
+        margin: 0 auto 32px;
+      }
+
+      .cta .btn-primary {
+        font-size: 1.1rem;
+        padding: 16px 40px;
+      }
+
+      /* FOOTER */
+      footer {
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.9rem;
+      }
+
+      footer .footer-links {
+        display: flex;
+        gap: 24px;
+      }
+
+      footer .footer-links a {
+        transition: color 0.2s;
+      }
+      footer .footer-links a:hover {
+        color: #bef264;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 40px 0 60px;
+        }
+
+        .hero-content p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+        }
+
+        .hero-image .mockup {
+          max-width: 100%;
+        }
+
+        .stats {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stats .stat-item:last-child {
+          grid-column: span 2;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .logo {
+          font-size: 1.3rem;
+        }
+        .nav-links {
+          gap: 16px;
+          font-size: 0.8rem;
+          flex-wrap: wrap;
+        }
+        .hero-content h1 {
+          font-size: 2.4rem;
+        }
+        .section-title {
+          font-size: 2rem;
+        }
+        .testimonial {
+          padding: 32px 20px;
+        }
+        .testimonial blockquote {
+          font-size: 1.2rem;
+        }
+        .cta {
+          padding: 40px 20px;
+        }
+        .cta h2 {
+          font-size: 2rem;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+        }
+        footer .footer-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .stats {
+          grid-template-columns: 1fr;
+        }
+        .stats .stat-item:last-child {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <!-- HEADER -->
+        <header>
+          <div class="logo">
+            <div class="logo-icon">W</div>
+            <span>W-DRIVER</span>
+          </div>
+          <div class="nav-links">
+            <a href="#">Início</a>
+            <a href="#">Serviços</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+          </div>
+          <div>
+            <a href="#" class="btn-primary">Solicitar agora</a>
+          </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-content">
+            <h1>
+              Transporte <span>legal</span> de<br />
+              passageiros e entregas
+            </h1>
+            <p>
+              Segurança, rapidez e preço justo. Quem escolhe preço corre riscos.
+              Quem escolhe a W-DRIVER escolhe <strong style="color:#bef264;">chegar bem!</strong>
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn-primary">📱 Pedir agora</a>
+              <a href="#" class="btn-outline">Conhecer serviços</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="mockup">
+              <div class="big-icon">🚗</div>
+              <h3>W-DRIVER</h3>
+              <p>Transporte seguro e ágil</p>
+              <div class="badge">✅ 100% legal</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-number">1.200+</div>
+            <div class="stat-label">Corridas realizadas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Avaliações positivas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4.9 ★</div>
+            <div class="stat-label">Média de avaliação</div>
+          </div>
+        </div>
+
+        <!-- SERVICES -->
+        <section class="services">
+          <h2 class="section-title">Nossos serviços</h2>
+          <p class="section-subtitle">
+            Soluções completas para transporte de passageiros e entregas, com
+            segurança e pontualidade.
+          </p>
+          <div class="cards-grid">
+            <div class="service-card">
+              <div class="icon">👤</div>
+              <h4>Passageiros</h4>
+              <p>Viagens confortáveis e seguras para você e sua família, com motoristas qualificados.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon">📦</div>
+              <h4>Entregas</h4>
+              <p>Envio de encomendas com rastreamento e agilidade, da porta até o destino.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon">🛡️</div>
+              <h4>Seguro total</h4>
+              <p>Todos os veículos segurados e motoristas treinados para sua tranquilidade.</p>
+            </div>
+            <div class="service-card">
+              <div class="icon">📱</div>
+              <h4>App exclusivo</h4>
+              <p>Agende, acompanhe e pague tudo pelo nosso aplicativo, simples e rápido.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+        <div class="testimonial">
+          <blockquote>
+            “Excelente serviço! Motorista muito educado, carro impecável e cheguei
+            no horário. Recomendo a W-DRIVER para todos.”
+          </blockquote>
+          <div class="author">
+            <div class="avatar">M</div>
+            <div class="author-info">
+              <strong>Mariana Silva</strong>
+              <span>Cliente há 6 meses</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta">
+          <h2>Pronto para viajar com segurança?</h2>
+          <p>Faça seu pedido agora e experimente a diferença de um transporte legal e confiável.</p>
+          <a href="#" class="btn-primary">🚀 Solicitar agora</a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+          <span>© 2026 W-DRIVER. Todos os direitos reservados.</span>
+          <div class="footer-links">
+            <a href="#">Termos</a>
+            <a href="#">Privacidade</a>
+            <a href="#">Suporte</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Pequeno script para interatividade (exemplo) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Efeito de digitação sutil no título (apenas demonstrativo)
+        const title = document.querySelector('.hero-content h1');
+        if (title) {
+          const original = title.innerHTML;
+          title.innerHTML = original; // manter
+        }
+
+        // Botões com alerta de demonstração
+        const botoes = document.querySelectorAll('.btn-primary, .btn-outline');
+        botoes.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            if (!btn.closest('a')) {
+              e.preventDefault();
+              alert('Funcionalidade em desenvolvimento! 🚀');
+            }
+          });
+        });
+
+        console.log('W-DRIVER — Landing page carregada com sucesso!');
+      });
+    </script>
+  </body>
+</html>
